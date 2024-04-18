@@ -14,11 +14,11 @@ public class Cat {
     }
 
     public void setName(String name) {
-        if (name != null && !name.isEmpty()) {
-            this.name = name;
+        if (name == null || name.isEmpty()) {
+            System.out.println("Exception: Name should not be empty!");
             return;
         }
-        System.out.println("Exception: Name should not be empty!");
+        this.name = name;
     }
 
     public int getAge() {
@@ -26,11 +26,11 @@ public class Cat {
     }
 
     public void setAge(int age) {
-        if (age >= 0) {
-            this.age = age;
+        if (age < 0) {
+            System.out.println("Exception: Age should not be negative!");
             return;
         }
-        System.out.println("Exception: Age should not be negative!");
+        this.age = age;
     }
 
     public String getHabit() {
@@ -38,11 +38,11 @@ public class Cat {
     }
 
     public void setHabit(String habit) {
-        if (habit != null && !habit.isEmpty()) {
-            this.habit = habit;
+        if (habit == null || habit.isEmpty()) {
+            System.out.println("Exception: habit should not be empty!");
             return;
         }
-        System.out.println("Exception: habit should not be empty!");
+        this.habit = habit;
     }
 
     @Override
